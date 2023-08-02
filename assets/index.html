@@ -8,7 +8,18 @@
         go.run(result.instance);
       });
     </script>
+    <link rel="stylesheet" href="style.css"> 
   </head>
   <body>
+    <div class="container">
+      <input type="text" name="expinput" id="expinput" class="item1">
+      <input type="submit" class="item2" name="button" id="button" value="Solve" onclick="solve(expinput.value)">
+      <textarea id="expoutput" class="item3" name="output" rows="2" cols="30"></textarea>
+    </div>
   </body>
+  <script>
+    var solve = function(input) {
+      expoutput.value =  solverExpr(input) 
+    }
+  </script>
 </html>
